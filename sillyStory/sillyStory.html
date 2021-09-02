@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+    <title>Silly Story Generator</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Silly Story Generator</h1>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default">Customer Name</span>
+            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+          </div>
+        <div class="switch">
+            <div class="form-check">
+                <input type="radio" checked='' class="form-check-radio"name="usuk" id="US">
+                <label for="US" class="form-check-label">US</label>
+            </div>
+            <div class="form-check">
+                <input type="radio" class="form-check-radio" name="usuk" id="UK">
+                <label for="UK" class="form-check-label">UK</label>
+            </div>
+        </div>
+        <div class="container-sm">
+            <p class="story"></p>
+        </div>
+        <button class="randomize">Generator A Story</button>
+    </div>
+      
+</body>
+</html>
