@@ -10,6 +10,8 @@
     --ctn-dark:#1c1c27;
     --white:#fafafa;
     --green:rgb(103, 247, 46);
+    --shadow-upper-dark:rgba(54, 53, 53, 0.274);
+    --shadow-lower-dark:rgba(0, 0, 0, 0.5);
 }
 body{
     background-color: var(--bg-dark);
