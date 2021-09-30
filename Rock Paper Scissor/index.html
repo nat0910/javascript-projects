@@ -11,11 +11,41 @@
 </head>
 <body>
     <div class="container">
-        <h1>rock paper and Scissor</h1>
+        <h1 class="display-3">rock paper and Scissor</h1>
         <div class="hand-sign">
-            <div class="container-sm"></div>
-            <div class="container-sm"></div>
-            <div class="container-sm"></div>
+            <div class="container-sm" onclick="result('rock')">
+                <img src="https://img.icons8.com/color/100/000000/hand-rock.png"  class="rock" width="100%" height="100%" />
+                <h2>Rock</h2>
+            </div>
+            <div class="container-sm" onclick="result('paper')" value="paper">
+                <img src="https://img.icons8.com/color/100/000000/hand.png"  class="paper" width="100%" height="100%"  />
+                <h2>Paper</h2>
+            </div>
+            <div class="container-sm" onclick="result('scissors')">
+                <img src="https://img.icons8.com/color/100/000000/hand-scissors--v1.png" class="scissors" width="100%" height="100%"  />
+                <h2>Scissors</h2>
+            </div>
+            <p class="lastResult">Choose your move , Its best of 5 !!</p>
+            <div class="score-area">
+                <span class="scoreboard">your score : 0</span>
+                <span class="scoreboard">computer score : 0</span>
+            </div>
+        </div>
+    </div>
+    <div class="overlay">
+        <div class="modal-box">
+            <span id='close' class="close">&times;</span>
+            <div class="box-body">
+                <div class="icon-tick">
+                    <span class="check">&check;</span>
+                </div>
+                <p>
+                    You won the game <b>!!</b>
+                </p>
+                <button>
+                    play again
+                </button>
+            </div>
         </div>
     </div>
 </body>
