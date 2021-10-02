@@ -27,14 +27,14 @@
             </div>
             <p class="lastResult">Choose your move , Its best of 5 !!</p>
             <div class="score-area">
-                <span class="scoreboard">your score : 0</span>
+                <span class="scoreboard">Your score : 0</span>
                 <span class="scoreboard">computer score : 0</span>
             </div>
         </div>
     </div>
-    <div class="overlay">
-        <div class="modal-box">
-            <span id='close' class="close">&times;</span>
+    <div class="overlay-won">
+        <div class="modal-box won">
+            <span onclick="reset('play')" class="close">&times;</span>
             <div class="box-body">
                 <div class="icon-tick">
                     <span class="check">&check;</span>
@@ -42,8 +42,24 @@
                 <p>
                     You won the game <b>!!</b>
                 </p>
-                <button>
+                <button class="wbtn" onclick="reset('play')">
                     play again
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="overlay-loss">
+        <div class="modal-box loss">
+            <span onclick="reset('try')" class="close">&times;</span>
+            <div class="box-body">
+                <div class="icon-cross">
+                    <span class="cross" >&times;</span>
+                </div>
+                <p>
+                    You lost the game <b>!!</b>
+                </p>
+                <button class="lbtn" onclick="reset('try')">
+                    try again
                 </button>
             </div>
         </div>

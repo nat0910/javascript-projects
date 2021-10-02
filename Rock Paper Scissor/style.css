@@ -5,10 +5,10 @@
 }
 
 :root{
-    --bg-color:#e9e8e8;
+    --bg-color:#fcf3f3;
     --font-color:#323232;
-    --cont-bg:#fdfdfd;
-    --color-gray:rgb(80, 76, 76);
+    --cont-bg:#fcfcfc;
+    --color-gray:rgb(48, 46, 46);
     --color-white:#f0efef;
 }
 body{
@@ -110,7 +110,7 @@ h2{
     letter-spacing: 2px;
 }
 
-.overlay {
+.overlay-won,.overlay-loss{
     transition: 1s ease-in-out;
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
@@ -120,13 +120,11 @@ h2{
     width: 100%; /* Full width */
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
   }
   
   /* Modal Content/Box */
   .modal-box{
-    background-color: #69d885;
     box-sizing: border-box;
     position: absolute;
     top: 50%;
@@ -136,8 +134,13 @@ h2{
     width: 30%; /* Could be more or less, depending on screen size */
     height: 45%;
     border-radius: 0.5rem;
-
-  }
+}
+.won{
+    background-color: #69d885;
+}
+.loss{
+    background-color: rgb(230, 139, 139);
+}
 .close{
     font-size: 3em;
     color: rgb(255, 255, 255);
@@ -149,7 +152,7 @@ h2{
     transition:  0.5s ease-in-out;
 }
 .close:hover{
-    color: rgb(238, 81, 81);
+    color: rgb(235, 44, 44);
 }
 .box-body{
     display: flex;
@@ -172,10 +175,25 @@ h2{
     text-align: center;
     padding: 0.15em;
 }
-.check{
+
+
+.icon-cross{
+    border: solid 0.35em #f53535;
+    border-radius: 50%;
+    width: 8em;
+    height: 8em;
+    text-align: center;
+    padding: 0.01em;
+}
+.check,.cross{
     font-size: 4.5em;
     font-weight: bolder;
     color: #1c9237;
+}
+.cross{
+    color: #f53535;
+    font-weight: 200;
+    font-size: 5em;
 }
 .box-body p{
     color: var(--color-white);
@@ -191,10 +209,19 @@ h2{
     border-radius: 0.25rem;
     padding: 0.75em 2em;
     text-transform: capitalize;
-    background-color: #178a32;
+    
     color: #ffffff;
     transition: 0.5s ease-in-out;
 }
-.box-body button:hover{
+.wbtn:hover{
     background-color: #14af38;
+}
+.lbtn:hover{
+    background-color: #14af38;
+}
+.wbtn{
+    background-color: #178a32;
+}
+.lbtn{
+    background-color: #8a1717;
 }
