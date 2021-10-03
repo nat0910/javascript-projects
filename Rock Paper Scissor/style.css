@@ -110,7 +110,7 @@ h2{
     letter-spacing: 2px;
 }
 
-.overlay-won,.overlay-loss{
+.overlay{
     transition: 1s ease-in-out;
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
@@ -136,9 +136,11 @@ h2{
     border-radius: 0.5rem;
 }
 .won{
+    display: none;
     background-color: #69d885;
 }
 .loss{
+    display: none;
     background-color: rgb(230, 139, 139);
 }
 .close{
@@ -217,7 +219,7 @@ h2{
     background-color: #14af38;
 }
 .lbtn:hover{
-    background-color: #14af38;
+    background-color: #af1414;
 }
 .wbtn{
     background-color: #178a32;

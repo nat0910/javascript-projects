@@ -3,14 +3,18 @@ const lastResult = document.querySelector('.lastResult');
 const btn = document.querySelector('.container-sm');
 const score = document.querySelector('.score-area');
 const choices = ['rock','paper','scissors'];
-const woverlay =document.querySelector('.overlay-won');
-const loverlay = document.querySelector('.overlay-loss');
+const overlay =document.querySelector('.overlay');
+const woverlay =document.querySelector('.won');
+const loverlay = document.querySelector('.loss');
 lastResult.classList.add('normal');
 
 
 function result(e) {
     let userAns = e;
     let compAns = choices[Math.floor(Math.random()*choices.length)];
+    console.log(userAns);
+    console.log(compAns);
+    console.log('');
 
     let winner = gameRule(userAns,compAns);
     
@@ -32,21 +36,17 @@ function result(e) {
     console.log(compAns);
     console.log('');
 
-    
-    if (userScore===5) {
-        lastResult.style.cssText='background-color:none'
-        lastResult.innerHTML = 'Choose your move , Its best of 5 !!';
-        woverlay.style.display='block';
+    if (userScore===5 || computerScore ===5) {
+        overlay.style.display = 'block'
+        if (userScore!==5) {
+            loverlay.style.display='block';
+        }
+        else{
+            woverlay.style.display='block';
+        }
     }
-    else if(computerScore===5){
-        
-        userScore=0;
-        computerScore=0;
-        lastResult.style.cssText='background-color:none'
-        lastResult.innerHTML = 'Choose your move , Its best of 5 !!';
-        loverlay.style.display='block';
 
-    }
+    
 }
 
 function gameRule(user,computer) {
@@ -88,13 +88,16 @@ function gameRule(user,computer) {
 }
 
 function reset(para){
-    if (para ==='play') {
-        userScore=0;computerScore=0;
-        woverlay.style.display='none';   
+    
+    userScore=0;computerScore=0;
         
+    lastResult.style.cssText='background-color:none'
+    lastResult.innerHTML = 'Choose your move , Its best of 5 !!';
+
+    if (para ==='play') {
+        overlay.style.display='none';   
     }else if(para==='try'){
-        userScore=0;computerScore=0;
-        loverlay.style.display='none';
+        overlay.style.display='none';
     }
 }
 
