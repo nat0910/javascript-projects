@@ -8,6 +8,7 @@ const woverlay =document.querySelector('.won');
 const loverlay = document.querySelector('.loss');
 lastResult.classList.add('normal');
 
+/* Function is excute when the rock,paper or scissor containers are clicked */
 
 function result(e) {
     let userAns = e;
@@ -16,7 +17,7 @@ function result(e) {
     console.log(compAns);
     console.log('');
 
-    let winner = gameRule(userAns,compAns);
+    let winner = gameRule(userAns,compAns); 
     
     if (winner==='User') {
         lastResult.style.cssText = 'background-color: #c2f3ce ; color :#1C592A';
@@ -31,12 +32,15 @@ function result(e) {
         lastResult.innerHTML = winner ;
     }
     
-    score.innerHTML = `<span class="scoreboard">your score : ${userScore}</span><span class="scoreboard">computer score : ${computerScore}</span>`
-    console.log(userAns);
-    console.log(compAns);
+    score.innerHTML = `<span class="scoreboard">your score : ${userScore}</span><span class="scoreboard">computer score : ${computerScore}</span>`;
+
+    console.log(userAns); // displays user answer in console
+    console.log(compAns); // displays computer answer in console
     console.log('');
 
-    if (userScore===5 || computerScore ===5) {
+    /* opens modal depending on whether you win or lose */
+
+    if (userScore === 5 || computerScore === 5 ) {
         overlay.style.display = 'block'
         if (userScore!==5) {
             loverlay.style.display='block';
@@ -46,8 +50,9 @@ function result(e) {
         }
     }
 
-    
 }
+
+/* Verifies the rules of rock paper scissor */
 
 function gameRule(user,computer) {
     if (user===computer) {
@@ -86,6 +91,8 @@ function gameRule(user,computer) {
         }
     }
 }
+
+/* reset the game fucntion  */
 
 function reset(para){
     
