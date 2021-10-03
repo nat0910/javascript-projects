@@ -10,6 +10,7 @@
     --cont-bg:#fcfcfc;
     --color-gray:rgb(48, 46, 46);
     --color-white:#f0efef;
+    --color-red:#b12a2a;
 }
 body{
     background-color: var(--bg-color);
@@ -112,15 +113,15 @@ h2{
 
 .overlay{
     transition: 1s ease-in-out;
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    display: none; 
+    position: fixed;
+    z-index: 1; 
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.4); 
   }
   
   /* Modal Content/Box */
@@ -131,7 +132,7 @@ h2{
     left: 50%;
     transform: translate(-50%,-50%);
     padding: 15px;
-    width: 30%; /* Could be more or less, depending on screen size */
+    width: 30%; 
     height: 45%;
     border-radius: 0.5rem;
 }
@@ -141,7 +142,7 @@ h2{
 }
 .loss{
     display: none;
-    background-color: rgb(230, 139, 139);
+    background-color: rgb(224, 104, 104);
 }
 .close{
     font-size: 3em;
@@ -151,7 +152,7 @@ h2{
     top: 0;
     right: 5.5%;
     cursor: pointer;
-    transition:  0.5s ease-in-out;
+    transition:  0.4s ease-in-out;
 }
 .close:hover{
     color: rgb(235, 44, 44);
@@ -180,7 +181,7 @@ h2{
 
 
 .icon-cross{
-    border: solid 0.35em #f53535;
+    border: solid 0.35em var(--color-red);
     border-radius: 50%;
     width: 8em;
     height: 8em;
@@ -193,7 +194,7 @@ h2{
     color: #1c9237;
 }
 .cross{
-    color: #f53535;
+    color: var(--color-red);
     font-weight: 200;
     font-size: 5em;
 }
@@ -213,17 +214,17 @@ h2{
     text-transform: capitalize;
     
     color: #ffffff;
-    transition: 0.5s ease-in-out;
+    transition: 0.1s ease-in-out;
 }
 .wbtn:hover{
     background-color: #14af38;
 }
 .lbtn:hover{
-    background-color: #af1414;
+    background-color: #bb1616;
 }
 .wbtn{
     background-color: #178a32;
 }
 .lbtn{
-    background-color: #992626;
+    background-color: var(--color-red);
 }
