@@ -23,8 +23,9 @@
     --box-shadow-wh:#ffffff;
     --circle-bg:#d6d3d3;
     --circle-clr:#ffffff;
-    --primary-font:rgb(0, 0, 0);
+    --primary-font:rgb(65, 62, 62);
     --secondary-font:rgb(85, 84, 84);
+    transition: all 0.5s ease-in-out;
 }
 .darkmode{
     --bg-color:#242333;
@@ -35,7 +36,9 @@
     --btn-color-hover:#5867e7;
     --box-shadow-bl:rgba(0, 0, 0, 0.5);
     --box-shadow-wh:rgba(17, 16, 16, 0.5);
-    transition: all 0.5s ease-in-out;
     --circle-bg:#4ca9e7;
     --circle-clr:#ffffff;
+    --primary-font:rgb(228, 227, 227);
+    --secondary-font:rgb(168, 167, 167);
+    transition: all 0.5s ease-in-out;
 }
