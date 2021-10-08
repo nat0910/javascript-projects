@@ -16,6 +16,8 @@
   --box-shadow-wh:#ffffff;
   --circle-bg:#d6d3d3;
   --circle-clr:#ffffff;
+  --primary-font:rgb(0, 0, 0);
+  --secondary-font:rgb(85, 84, 84);
 }
 
 .darkmode {
@@ -77,6 +79,7 @@ body {
   height: 350px;
   background-color: var(--bg-color);
   border-radius: 1rem;
+  padding: 25px;
 }
 
 .toggle-cont {
@@ -99,6 +102,7 @@ body {
   background-color: var(--circle-bg);
   border-radius: 2rem;
   position: absolute;
+  cursor: pointer;
 }
 
 .toggle-cont .toggle-switch .circle {

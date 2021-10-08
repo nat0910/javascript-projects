@@ -16,6 +16,8 @@
   --box-shadow-wh:#ffffff;
   --circle-bg:#d6d3d3;
   --circle-clr:#ffffff;
+  --primary-font:rgb(0, 0, 0);
+  --secondary-font:rgb(85, 84, 84);
 }
 
 .darkmode {

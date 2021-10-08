@@ -30,6 +30,7 @@ body{
             height: 350px;
             background-color: var(--bg-color);
             border-radius: 1rem;
+            padding: 25px;
         }
     }
 }
@@ -48,6 +49,7 @@ body{
         background-color: var(--circle-bg);
         border-radius: 2rem;
         position: absolute;
+        cursor: pointer;
 
         .circle{
             background-color: var(--circle-clr);
