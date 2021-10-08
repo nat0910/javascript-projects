@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:root {
+  --bg-color:#e7e7e7;
+  --font-color:#323232;
+  --cont-color:#ffffff;
+  --btn-color: #4c5be7;
+  --btn-font:#d3d3d3;
+  --btn-color-hover:#5867e7;
+  --box-shadow-bl:rgba(0, 0, 0, 0.15);
+  --box-shadow-wh:#ffffff;
+  --circle-bg:#d6d3d3;
+  --circle-clr:#ffffff;
+}
+
+.darkmode {
+  --bg-color:#242333;
+  --font-color:#e7e7e7;
+  --cont-color:#1c1c27;
+  --btn-color: #4c5be7;
+  --btn-font:#d3d3d3;
+  --btn-color-hover:#5867e7;
+  --box-shadow-bl:rgba(0, 0, 0, 0.5);
+  --box-shadow-wh:rgba(17, 16, 16, 0.5);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  --circle-bg:#4ca9e7;
+  --circle-clr:#ffffff;
+}
+
+body {
+  background-color: var(--bg-color);
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 50%;
+  height: 600px;
+  background-color: var(--cont-color);
+  -webkit-box-shadow: 4px 4px 10px var(--box-shadow-bl), -4px -4px 10px var(--box-shadow-wh);
+          box-shadow: 4px 4px 10px var(--box-shadow-bl), -4px -4px 10px var(--box-shadow-wh);
+  border-radius: 0.75rem;
+}
+
+.container h1 {
+  text-align: center;
+  font-family: Helvetica, sans-serif;
+  font-size: 3.5em;
+  margin-top: 5%;
+  color: var(--font-color);
+}
+
+.container .para {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 6.5%;
+}
+
+.container .para .container-sm {
+  width: 40%;
+  height: 350px;
+  background-color: var(--bg-color);
+  border-radius: 1rem;
+}
+
+.toggle-cont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  margin-top: 5%;
+}
+
+.toggle-cont .toggle-switch {
+  width: 4.5em;
+  height: 2em;
+  background-color: var(--circle-bg);
+  border-radius: 2rem;
+  position: absolute;
+}
+
+.toggle-cont .toggle-switch .circle {
+  background-color: var(--circle-clr);
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 10em;
+  cursor: pointer;
+  position: absolute;
+  top: 0.25em;
+  left: 0.3em;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.toggle-switch::before {
+  content: "Light Mode On";
+  width: 12em;
+  position: absolute;
+  left: -6em;
+  font-size: 1.15em;
+  top: -0.1em;
+  color: var(--font-color);
+}
+
+#input-toggle:checked ~ label .circle {
+  -webkit-transform: translateX(2.5em);
+          transform: translateX(2.5em);
+}
+
+#input-toggle:checked ~ .toggle-switch::before {
+  content: 'Dark Mode On';
+}
+
+#input-toggle {
+  display: none;
+}
+/*# sourceMappingURL=style.css.map */
