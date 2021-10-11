@@ -10,27 +10,50 @@
   --cont-bg:#ffffff;
   --shadow-up:#ffffffb0;
   --shadow-dwn:#b9b9b9;
-  --font-color:gray;
+  --primary-font-color:#1d1d1d;
+  --secondary-font-color:gray;
   --field-color:#e6e6e6;
   --primary-btn_hover-clr:#3342cf;
   --primary-btn-clr:#5866e4;
   --btn-font-clr:#f3f3f3;
   --secondary-btn-clr:#ab5ae0;
   --secondary-btn_hover-clr:#b762f0;
+  --circle-bg:#d6d3d3;
+  --circle-clr:#ffffff;
   --win-bg:#c2f3ce;
   --win-font-clr:#1C592A;
   --loss-bg:#FEEFEF ;
-  --loss-font-clr:#DA1414 ;
+  --loss-font-clr:#DA1414;
+}
+
+.darkmode {
+  --bg-color:#242333;
+  --cont-bg:#1c1c27;
+  --shadow-up:rgba(17, 16, 16, 0.5);
+  --shadow-dwn:rgba(0, 0, 0, 0.5);
+  --primary-font-color:#f8f8f8;
+  --secondary-font-color:#868585;
+  --field-color:#333241;
+  --primary-btn_hover-clr:#3342cf;
+  --primary-btn-clr:#5866e4;
+  --btn-font-clr:#f3f3f3;
+  --secondary-btn-clr:#ab5ae0;
+  --secondary-btn_hover-clr:#b762f0;
+  --circle-bg:#4ca9e7;
+  --circle-clr:#ffffff;
+  --loss-bg:#f8c0c0 ;
+  --loss-font-clr:#dd2525;
 }
 
 body {
   background-color: var(--bg-color);
+  color: var(--primary-font-color);
   font-family: Roboto, sans-serif;
 }
 
 body .container {
   background-color: var(--cont-bg);
-  border-radius: 1rem;
+  border-radius: 0.6rem;
   width: 60%;
   padding: 35px 50px;
   -webkit-box-shadow: 2px 2px 5px var(--shadow-dwn), 2px 2px 10px var(--shadow-up);
@@ -43,7 +66,7 @@ body .container {
 }
 
 body .heading p {
-  color: var(--font-color);
+  color: var(--secondary-font-color);
 }
 
 body .form {
@@ -69,6 +92,7 @@ body .form .guessField, body .form .guessSubmit, body .form .Reset {
   border-radius: 0.5rem;
   border: none;
   background-color: var(--field-color);
+  color: var(--primary-font-color);
   padding: 0.3em;
   text-align: center;
 }
@@ -130,5 +154,56 @@ body .form .guessSubmit:hover {
 .loss {
   background-color: var(--loss-bg);
   color: var(--loss-font-clr);
+}
+
+.toggle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.toggle-switch {
+  background-color: var(--circle-bg);
+  width: 4em;
+  height: 2em;
+  border-radius: 10em;
+  position: absolute;
+  cursor: pointer;
+}
+
+.toggle-center {
+  width: 1.6em;
+  height: 1.6em;
+  background-color: var(--circle-clr);
+  border-radius: 10em;
+  position: absolute;
+  top: 0.2em;
+  left: 0.2em;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.toggle-switch::before {
+  content: "Light Mode On";
+  position: absolute;
+  width: 12.5em;
+  left: -7em;
+  top: 0.2em;
+}
+
+#input-toggle {
+  display: none;
+}
+
+#input-toggle:checked ~ .toggle-switch::before {
+  content: "Dark Mode On";
+}
+
+#input-toggle:checked ~ label .toggle-center {
+  -webkit-transform: translateX(2em);
+          transform: translateX(2em);
 }
 /*# sourceMappingURL=style.css.map */

@@ -2,11 +2,12 @@
 
 body{
     background-color: var(--bg-color);
+    color: var(--primary-font-color);
     font-family: $family;
 
     .container{
         background-color: var(--cont-bg);
-        border-radius: 1rem;
+        border-radius: 0.6rem;
         width: 60%;
         padding: 35px 50px;
         box-shadow: 2px 2px 5px var(--shadow-dwn),2px 2px 10px var(--shadow-up);
@@ -15,7 +16,7 @@ body{
     }
     .heading{
         p{
-            color: var(--font-color);
+            color: var(--secondary-font-color);
         }
     }
     .form{
@@ -27,6 +28,7 @@ body{
             border-radius: 0.5rem;
             border: none;
             background-color: var(--field-color);
+            color: var(--primary-font-color);
             padding: 0.3em;
             text-align: center;
         }
@@ -82,4 +84,45 @@ body{
 .loss{
     background-color: var(--loss-bg);
     color: var(--loss-font-clr);
+}
+
+.toggle{
+    display: flex;
+    justify-content: flex-end;
+}
+.toggle-switch{
+    background-color: var(--circle-bg);
+    width: 4em;
+    height: 2em;
+    border-radius: 10em;
+    position: absolute;
+    cursor: pointer;
+}
+.toggle-center{
+    width: 1.6em;
+    height: 1.6em;
+    background-color: var(--circle-clr);
+    border-radius: 10em;
+    position: absolute;
+    top: 0.2em;
+    left: 0.2em;
+    transition: all 0.5s ease-in-out;
+}
+
+.toggle-switch::before{
+    content: "Light Mode On";
+    position: absolute;
+    width: 12.5em;
+    left: -7em;
+    top: 0.2em;
+}
+
+#input-toggle{
+    display: none;
+}
+#input-toggle:checked ~ .toggle-switch::before{
+    content: "Dark Mode On";
+}
+#input-toggle:checked ~ label .toggle-center{
+    transform: translateX(2em);
 }

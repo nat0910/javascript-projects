@@ -10,16 +10,38 @@
   --cont-bg:#ffffff;
   --shadow-up:#ffffffb0;
   --shadow-dwn:#b9b9b9;
-  --font-color:gray;
+  --primary-font-color:#1d1d1d;
+  --secondary-font-color:gray;
   --field-color:#e6e6e6;
   --primary-btn_hover-clr:#3342cf;
   --primary-btn-clr:#5866e4;
   --btn-font-clr:#f3f3f3;
   --secondary-btn-clr:#ab5ae0;
   --secondary-btn_hover-clr:#b762f0;
+  --circle-bg:#d6d3d3;
+  --circle-clr:#ffffff;
   --win-bg:#c2f3ce;
   --win-font-clr:#1C592A;
   --loss-bg:#FEEFEF ;
-  --loss-font-clr:#DA1414 ;
+  --loss-font-clr:#DA1414;
+}
+
+.darkmode {
+  --bg-color:#242333;
+  --cont-bg:#1c1c27;
+  --shadow-up:rgba(17, 16, 16, 0.5);
+  --shadow-dwn:rgba(0, 0, 0, 0.5);
+  --primary-font-color:#f8f8f8;
+  --secondary-font-color:#868585;
+  --field-color:#333241;
+  --primary-btn_hover-clr:#3342cf;
+  --primary-btn-clr:#5866e4;
+  --btn-font-clr:#f3f3f3;
+  --secondary-btn-clr:#ab5ae0;
+  --secondary-btn_hover-clr:#b762f0;
+  --circle-bg:#4ca9e7;
+  --circle-clr:#ffffff;
+  --loss-bg:#f8c0c0 ;
+  --loss-font-clr:#dd2525;
 }
 /*# sourceMappingURL=root_reset.css.map */
