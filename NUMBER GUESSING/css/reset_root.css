@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:root {
+  --bg-color:#e7e7e7;
+  --font-color:#323232;
+  --cont-color:#ffffff;
+  --btn-color: #4c5be7;
+  --btn-font:#d3d3d3;
+  --btn-color-hover:#5867e7;
+  --box-shadow-bl:rgba(0, 0, 0, 0.15);
+  --box-shadow-wh:#ffffff;
+  --circle-bg:#d6d3d3;
+  --circle-clr:#ffffff;
+  --primary-font:rgb(65, 62, 62);
+  --secondary-font:rgb(85, 84, 84);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.darkmode {
+  --bg-color:#242333;
+  --font-color:#e7e7e7;
+  --cont-color:#1c1c27;
+  --btn-color: #4c5be7;
+  --btn-font:#d3d3d3;
+  --btn-color-hover:#5867e7;
+  --box-shadow-bl:rgba(0, 0, 0, 0.5);
+  --box-shadow-wh:rgba(17, 16, 16, 0.5);
+  --circle-bg:#4ca9e7;
+  --circle-clr:#ffffff;
+  --primary-font:rgb(228, 227, 227);
+  --secondary-font:rgb(168, 167, 167);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+/*# sourceMappingURL=reset_root.css.map */

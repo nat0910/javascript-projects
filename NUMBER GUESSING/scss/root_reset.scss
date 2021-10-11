@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+$family:Roboto,sans-serif;
+$font-weight:(
+    "normal":400,
+    "medium":500,
+    "bold":700
+);
+:root{
+    --bg-color:#e7e7e7;
+    --cont-bg:#ffffff;
+    --shadow-up:#ffffffb0;
+    --shadow-dwn:#b9b9b9;
+    --font-color:gray;
+    --field-color:#e6e6e6;
+    --primary-btn_hover-clr:#3342cf;
+    --primary-btn-clr:#5866e4;
+    --btn-font-clr:#f3f3f3;
+    --secondary-btn-clr:#ab5ae0;
+    --secondary-btn_hover-clr:#b762f0;
+    --win-bg:#c2f3ce;
+    --win-font-clr:#1C592A;
+    --loss-bg:#FEEFEF ;
+    --loss-font-clr:#DA1414 ;
+}
+
+@function weights($weight-names){
+    @return map-get($font-weight, $weight-names );
+}
+
+@mixin container-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+@mixin flex-center {
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+    justify-content: flex-start;
+    align-items: center;
+}
+

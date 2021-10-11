@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:root {
+  --bg-color:#e7e7e7;
+  --cont-bg:#ffffff;
+  --shadow-up:#ffffffb0;
+  --shadow-dwn:#b9b9b9;
+  --font-color:gray;
+  --field-color:#e6e6e6;
+  --primary-btn_hover-clr:#3342cf;
+  --primary-btn-clr:#5866e4;
+  --btn-font-clr:#f3f3f3;
+  --secondary-btn-clr:#ab5ae0;
+  --secondary-btn_hover-clr:#b762f0;
+  --win-bg:#c2f3ce;
+  --win-font-clr:#1C592A;
+  --loss-bg:#FEEFEF ;
+  --loss-font-clr:#DA1414 ;
+}
+/*# sourceMappingURL=root_reset.css.map */

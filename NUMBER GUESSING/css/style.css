@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:root {
+  --bg-color:#e7e7e7;
+  --cont-bg:#ffffff;
+  --shadow-up:#ffffffb0;
+  --shadow-dwn:#b9b9b9;
+  --font-color:gray;
+  --field-color:#e6e6e6;
+  --primary-btn_hover-clr:#3342cf;
+  --primary-btn-clr:#5866e4;
+  --btn-font-clr:#f3f3f3;
+  --secondary-btn-clr:#ab5ae0;
+  --secondary-btn_hover-clr:#b762f0;
+  --win-bg:#c2f3ce;
+  --win-font-clr:#1C592A;
+  --loss-bg:#FEEFEF ;
+  --loss-font-clr:#DA1414 ;
+}
+
+body {
+  background-color: var(--bg-color);
+  font-family: Roboto, sans-serif;
+}
+
+body .container {
+  background-color: var(--cont-bg);
+  border-radius: 1rem;
+  width: 60%;
+  padding: 35px 50px;
+  -webkit-box-shadow: 2px 2px 5px var(--shadow-dwn), 2px 2px 10px var(--shadow-up);
+          box-shadow: 2px 2px 5px var(--shadow-dwn), 2px 2px 10px var(--shadow-up);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+body .heading p {
+  color: var(--font-color);
+}
+
+body .form {
+  margin-top: 2.5%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 2em;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  align-items: center;
+}
+
+body .form .guessField, body .form .guessSubmit, body .form .Reset {
+  border-radius: 0.5rem;
+  border: none;
+  background-color: var(--field-color);
+  padding: 0.3em;
+  text-align: center;
+}
+
+body .form .guessField:focus, body .form .guessField:active {
+  border: none;
+  outline: none;
+}
+
+body .form .guessSubmit {
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+  padding: 0.35em 1em;
+  font-size: 1.2em;
+  background-color: var(--primary-btn-clr);
+  color: var(--btn-font-clr);
+}
+
+body .form .guessSubmit:hover {
+  background-color: var(--primary-btn_hover-clr);
+}
+
+.resultParas {
+  display: none;
+  margin-top: 2.5%;
+  -webkit-transition: all 10s ease-in-out;
+  transition: all 10s ease-in-out;
+}
+
+.lastResult {
+  margin-top: 3%;
+  text-align: left;
+  padding: 0.5em 2.5%;
+  border-radius: 0.5rem;
+  width: 45%;
+}
+
+.Reset {
+  display: none;
+  float: right;
+  background-color: var(--secondary-btn-clr);
+  color: var(--btn-font-clr);
+  margin-bottom: 2%;
+  margin-right: 2%;
+  border-radius: 0.5rem;
+  border: none;
+  padding: 0.5em 1em;
+}
+
+.Reset:hover {
+  background-color: var(--secondary-btn_hover-clr);
+}
+
+.win {
+  background-color: var(--win-bg);
+  color: var(--win-font-clr);
+}
+
+.loss {
+  background-color: var(--loss-bg);
+  color: var(--loss-font-clr);
+}
+/*# sourceMappingURL=style.css.map */
