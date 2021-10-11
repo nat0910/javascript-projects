@@ -66,6 +66,6 @@ function setGameOver() {
     guessSubmit.disabled = false;
     guessField.value = '';
     guessField.focus();
-    lastResult.style.display='none';
+    resultp.style.display='none';
     randomNumber = Math.floor(Math.random() * 100) + 1;
   }
