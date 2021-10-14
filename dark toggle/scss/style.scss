@@ -3,6 +3,7 @@
 
 body{
     background-color: var(--bg-color);
+    transition: all 0.5s ease-in-out;
 }
 .container{
     @include container-center;
@@ -87,7 +88,7 @@ body{
 }
 
 .toggle-switch::before{
-    content: "Light Mode On";
+    content: var(--toggle-content);
     width: 12em;
     position: absolute;
     left: -7.5em;
