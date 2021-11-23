@@ -12,8 +12,7 @@ function App(){
     propmt.style.display="none";
   }
 
-  const alert_open = (para)=>{
-    console.log('hello world');
+  const remove_item = (para)=>{
     let propmt = document.querySelector('.alert');
     propmt.style.display="block";
 
@@ -22,10 +21,16 @@ function App(){
     setPeople(remove_item);
   }
 
+  const remove_all = ()=>{
+    
+    let propmt = document.querySelector('.alert');
+    propmt.style.display="block";
+
+    setPeople([])
+  }
 
   return (
     <React.Fragment>
-
       <div className="container">
         <h1 className="heading">Birthday Reminders</h1>
         <div className="alert">
@@ -36,23 +41,23 @@ function App(){
         </div>
         <div className="item">
           {
-              people.map((person)=>{
-                 const data = person;
-                 return <>
+            people.map((person)=>{
+                const data = person;
+                return (
+                  <>
                     <div className="cards">
                       <Cards key={data.id} {...data}></Cards>
                         <div>
-                          <input type="checkbox" name="" id="" onClick={()=>alert_open(data.id)} width="3em" height="3em"/>
+                          <input type="checkbox" name="" id="" onClick={()=>remove_item(data.id)} width="3em" height="3em"/>
                         </div>
                     </div>
-                  
                   </>
-                  
-
-               })
+                )
+              }
+            )
           }
         </div>
-        <button type="button" className="btn" onClick={()=>setPeople([])}>
+        <button type="button" className="btn" onClick={remove_all}>
           Check All
         </button>
       </div>

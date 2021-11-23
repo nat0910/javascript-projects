@@ -67,7 +67,7 @@ body {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  box-shadow: 2px 6px 10px rgba(105, 102, 102, 0.16);
+  box-shadow: 0 0 15px rgba(105, 102, 102, 0.16);
   border-radius: map-get($bdr-radius, "sm");
 
   .profile {
@@ -110,4 +110,5 @@ body {
   color: var(--failure-clr);
   font-size: 1em;
   letter-spacing: 2px;
+  cursor: pointer;
 }
