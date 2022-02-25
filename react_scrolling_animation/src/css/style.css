@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+@import url(d:\projects\react_projects\my_app\src\css\navbar.css);
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:root {
+  --bg-clr: #0f0f14;
+  --cont-clr: #212130;
+  --primary-accent: #2b8dee;
+  --clr-white: #fff;
+  --transiton: 500ms linear;
+  --cont-bg: #2d2d41;
+}
+
+body {
+  background-color: var(--bg-clr);
+  font-family: "Poppins", sans-serif;
+}
+
+#root {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
+}
+
+nav {
+  background-color: var(--cont-clr);
+  -webkit-box-shadow: 0 2px 10px #111111;
+          box-shadow: 0 2px 10px #111111;
+  z-index: 999;
+  width: 100%;
+  position: relative;
+}
+
+.content-section {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+section {
+  position: relative;
+}
+
+section:nth-of-type(1) {
+  background-color: pink;
+  color: #f58497;
+}
+
+.sticky-view {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  width: 100%;
+}
+
+.sticky-content {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sticky-content h1 {
+  text-transform: uppercase;
+  font-size: 3em;
+  text-align: center;
+}
+
+.home h1 {
+  font-size: 4em;
+}
+
+.project {
+  background-color: #a8faec;
+  color: #42cab4;
+}
+
+section:nth-of-type(3) {
+  background-color: #eaa8fa;
+  color: #be5dd6;
+}
+
+.contact {
+  background-color: #f8ce96;
+  color: #e4aa5e;
+}
+/*# sourceMappingURL=style.css.map */
