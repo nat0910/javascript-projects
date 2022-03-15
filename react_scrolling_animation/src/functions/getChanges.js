@@ -14,7 +14,7 @@ export function sectionChanges() {
     } else if (val < 1.1) {
       return {
         opacity: (1.1 - val) * 10,
-        transform: `scale(${5 - (1.1 - val) * 10 * 3})`,
+        transform: `scale(${4 - (1.1 - val) * 10 * 3})`,
       };
     } else if (val > 1.1) {
       return { opacity: 0 };
@@ -63,7 +63,7 @@ export function sectionChanges() {
     }
   }
 
-  function fourthSection(val) {
+  function fourthBackgroundSection(val) {
     if (val < -0.3) {
       return {
         borderRadius: `50rem 0 0 0`,
@@ -79,5 +79,26 @@ export function sectionChanges() {
       };
     }
   }
-  return { firstSection, secondSection, thirdSection, fourthSection };
+
+  function fourthForegroundSection(val) {
+    if (val < 0) {
+      return {
+        transform: `translateX(20rem)`,
+        opacity: 0,
+      };
+    } else if (val > 0) {
+      return {
+        transform: `translateX(0rem)`,
+        opacity: 1,
+      };
+    }
+  }
+
+  return {
+    firstSection,
+    secondSection,
+    thirdSection,
+    fourthBackgroundSection,
+    fourthForegroundSection,
+  };
 }

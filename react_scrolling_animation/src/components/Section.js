@@ -1,9 +1,7 @@
 import { useContext, useEffect, useRef, useState } from "react";
 import ScrollContext from "./ScrollContext";
 
-// eslint-disable-next-line react/prop-types
 export default function Section(para) {
-  // eslint-disable-next-line react/prop-types
   const { height, children } = para;
   const elRef = useRef();
   const { scrollingElement } = useContext(ScrollContext);
