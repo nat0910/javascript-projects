@@ -3,7 +3,6 @@ export function sectionChanges() {
     if (val < 0) {
       return {
         opacity: 0,
-        transform: `scale(${5})`,
       };
     } else if (val < 0.1) {
       return {
@@ -15,9 +14,9 @@ export function sectionChanges() {
     } else if (val < 1.1) {
       return {
         opacity: (1.1 - val) * 10,
-        transform: `scale(${4 - (1.1 - val) * 10 * 3})`,
+        transform: `scale(${5 - (1.1 - val) * 10 * 3})`,
       };
-    } else {
+    } else if (val > 1.1) {
       return { opacity: 0 };
     }
   }
@@ -43,32 +42,37 @@ export function sectionChanges() {
   }
 
   function thirdSection(val) {
-    console.log(val);
-    
-    if (val < 1) {
-      console.log(val*10);
+    if (val < 0) {
+      return {
+        opacity: 0,
+      };
+    } else if (val < 0.1) {
       return {
         opacity: val * 10,
         transform: `scale(${val * 10})`,
       };
-    } else {
+    } else if (val < 1) {
+      return { opacity: 1 };
+    } else if (val < 1.1) {
       return {
-        opacity: 0,
+        opacity: (1.1 - val) * 10,
+        transform: `scale(${(1.1 - val) * 10})`,
       };
+    } else if (val > 1.1) {
+      return { opacity: 0 };
     }
   }
 
   function fourthSection(val) {
     if (val < -0.3) {
       return {
+        borderRadius: `50rem 0 0 0`,
         transform: `translateX(20rem) translateY(10rem)`,
       };
     } else if (val < 0) {
       let radius = -val * 50 * 3.3;
       let x_axis = -val * 20 * 3.3;
       let y_axis = -val * 10 * 3.3;
-      // console.log(x_axis.toFixed(2));
-      console.log(radius);
       return {
         borderRadius: `${radius}rem 0 0 0`,
         transform: `translateX(${x_axis}rem) translateY(${y_axis}rem)`,

@@ -4,7 +4,7 @@ import ScrollContext from "./ScrollContext";
 // eslint-disable-next-line react/prop-types
 export default function Section(para) {
   // eslint-disable-next-line react/prop-types
-  const { height, secHeight, children } = para;
+  const { height, children } = para;
   const elRef = useRef();
   const { scrollingElement } = useContext(ScrollContext);
   const [val, setVal] = useState(null);
@@ -34,7 +34,10 @@ export default function Section(para) {
 
   return (
     <section ref={elRef} style={{ height }}>
-      <div className="sticky-view" style={{ height: `${secHeight}px` }}>
+      <div
+        className="sticky-view"
+        style={{ height: scrollingElement?.clientHeight }}
+      >
         {children(val)}
       </div>
     </section>
